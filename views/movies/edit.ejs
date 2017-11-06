@@ -1,0 +1,27 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+     <h1>Enter movie</h1>
+        <form action="/movies/<%= result._id %>?_method=PUT" method="POST">
+            <label for="title">Title</label>
+            <input type="text" name="title" value="<%=result.title %>"> <br/>
+            
+            <label for="poster">Poster</label>
+            <input type="text" name="poster" value="<%=result.poster %>"><br/>
+    
+            <label for="Genre">Genre</label>
+            <input type="text" name="genre" value="<%=result.genre %>"><br/>
+    
+            <label for="duration">Duration</label>
+            <input type="text" name="duration" value="<%=result.duration %>"><br/>
+    
+            <input type="submit" name="prosledi" value="Send">
+        
+        </form>
+    </body>
+    </html>
