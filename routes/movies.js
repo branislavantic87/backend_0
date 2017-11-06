@@ -66,6 +66,13 @@ router.put('/movies/:id', (req, res) => {
     })
 });
 //Delete
+router.delete('/movies/:id', (req, res) => {
+    var id = req.params.id;
+    Movie.findByIdAndRemove(id, (err, deletedMovie) => {
+        if (err) throw err;
+        res.json(deletedMovie);
 
+    })
+})
 
 module.exports = router;
